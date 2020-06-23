@@ -23,7 +23,7 @@ public class TransferService {
 
 	public void transferMoney(String userFrom, String userTo, BigDecimal amount)
 			throws SQLException, InsufficientFundsException {
-		
+			
 		try {
 			// ausgeblendet klappt es nicht: Zeile 29, 32, 35
 			con.setAutoCommit(false);
@@ -36,8 +36,5 @@ public class TransferService {
 				con.rollback();
 				throw ex;
 			}
-		
-		
 	}
-
 }

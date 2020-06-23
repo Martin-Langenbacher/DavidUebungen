@@ -11,13 +11,10 @@ public class Main {
 
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		// 3 Konten anlegen:
-		
-		
-		
 		Connection con = DriverManager
 				.getConnection("jdbc:mysql://my_stuff:my_stuff@localhost:3306/my_stuff?serverTimezone=CET");
 		
+		// 3 Konten anlegen:
 		//SetupUtil.setup();
 		
 		try {

@@ -32,6 +32,8 @@ public class TransactionTest {
 		}
 	}
 
+	
+	
 	@Test
 	public void testWithdraw() throws Exception {
 		// 2 accounts with 1000 EUR
@@ -47,8 +49,9 @@ public class TransactionTest {
 		} catch (InsufficientFundsException e) {
 			fail("Should not be able to withdraw his account");
 		}
-
 	}
+	
+	
 
 	@Test
 	public void testWithdrawTooMuch() throws Exception {
@@ -66,6 +69,8 @@ public class TransactionTest {
 		}
 	}
 
+	
+	
 	@Test
 	public void testTransferGood() throws Exception {
 
@@ -85,9 +90,6 @@ public class TransactionTest {
 		//assertTrue(accService.getBalanceOfUser("david").compareTo(new BigDecimal(0)) == 0);
 		assertTrue(BigDecimalUtil.isZero(accService.getBalanceOfUser("david")));
 		assertTrue(accService.getBalanceOfUser("andre").compareTo(new BigDecimal(2000)) == 0);
-		
-		//assertTrue("Balance should be 0", new BigDecimal(0).compareTo(accService.getBalanceOfUser("david")) == 0);
-
 		// TODO assert that davids balance is 0
 		// TODO assert that andres balance is 2000
 	}
@@ -117,9 +119,6 @@ public class TransactionTest {
 			
 			assertTrue(accService.getBalanceOfUser("andre").compareTo(new BigDecimal(1000)) == 0);
 			assertTrue(accService.getBalanceOfUser("david").compareTo(new BigDecimal(1000)) == 0);
-			
-			
-			
 			//fail("implement check if the balances are still at 1000");
 		}
 		
